@@ -247,18 +247,28 @@ padding-top: 70px;
     padding: 0 5px;
 }
 .calendar {
-    width: 371px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding-top: 40px;
 }
-.day-of-week {
-    width: 53px;
-    height: 35px;
-    font-size: 12px;
-    /* text-align: center; */
+.calendar__item {
+    width: calc(100%/7);
+    font-size: 15px;
+    text-align: center;
     font-weight: 500;
+    aspect-ratio:1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
-.is-gray {
+.calendar__item--small {
+    font-size: 12px;
+}
+.calendar__item--gray {
     color: rgb(190,191,202);
+}
+.calendar__item--active {
+    background:black;
+    color:white;
 }

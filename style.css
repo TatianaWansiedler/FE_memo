@@ -60,6 +60,10 @@ padding-top: 70px;
     font-size: 1.5rem;
     padding-right: 15px;
 }
+/* .menu__icon--trans {
+    transform: rotateY(180deg);
+    padding-right: 15px;
+} */
 .logout {
     height: 100px;
     padding-top: 20px;
@@ -69,11 +73,11 @@ padding-top: 70px;
 }
 /* ----------------------------------------------- */
 .page {
-    width: 60%;
+    width: 55%;
     height: 100%;
     margin-left: 250px;
     border-right: 1px solid rgba(171, 170, 170, 0.333);
-    padding: 40px 30px;
+    padding: 40px;
 }
 .header {
     display: flex;
@@ -226,7 +230,7 @@ padding-top: 70px;
 }
 
 
-/* ------------------------------------------------ */
+/* ------------------Schedule------------------------------ */
 .schedule {
     width: 30%;
     padding: 40px;
@@ -262,6 +266,10 @@ padding-top: 70px;
     justify-content: center;
     align-items:center;
 }
+.calendar__item:not(.calendar__item--small):hover {
+    background:lightgray;
+    cursor: pointer;
+}
 .calendar__item--small {
     font-size: 12px;
 }
@@ -272,3 +280,4 @@ padding-top: 70px;
     background:black;
     color:white;
 }
+/* --------------------Upcoming-------------------------------- */

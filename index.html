@@ -12,6 +12,9 @@
 <body>
 
     <div class="wrapper">
+        <div class="burger" onclick="toggleMenu()">
+            <i class="las la-bars"></i>
+        </div>
         <aside class="sidebar">
             <div class="logo">
                 <span class="logo__icon"><i class="lab la-modx"></i></span>
@@ -20,7 +23,7 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href="#">
+                        <a class="menu__link menu__link--aktive" href="#">
                             <span class="menu__icon"><i class="las la-images"></i></span>
                             <span class="menu__text">Courses</span>
                         </a>
@@ -64,185 +67,237 @@
                 </a>
             </div>
         </aside>
-
-        <main class="page">
-            <header class="header">
-                <div class="user-block">
-                    <span class="user-block__avatar mr-15"><img src="./image/emoji.jpeg" alt=""></span>
-                    <div class="user-block__info">
-                        <h2 class="user-block__name"> Leslie Alexander</h2>
-                        <p class="user-block__plase"> Los Angeles, CA</p> 
+        <!-- Center - Page -->
+         <main class="page">
+                <header class="header">
+                    <div class="user-block">
+                        <span class="user-block__avatar mr-15"><img src="./image/emoji.jpeg" alt=""></span>
+                        <div class="user-block__info">
+                            <h2 class="user-block__name"> Leslie Alexander</h2>
+                            <p class="user-block__place"> Los Angeles, CA</p> 
+                        </div>
                     </div>
-                </div>
-                <div class="search">
-                    <input class="search__input" type="text" placeholder="Search.."></class=>
-                    <span class="search__icon"><i class="las la-search"></i></span>
-                </div>
-            </header>
-            <div class="section">
-                <h2 class="section__title">Courses</h2>
-                <p class="section__review">See all</p>
-            </div>
-            <nav class="nav">
-                <ul class="list">
-                    <li class="list__item">
-                        <a class="list__link" href="#">All</a>
-                    </li>
-                    <li class="list__item">
-                        <a class="list__link" href="#">Current</a>
-                    </li>
-                    <li class="list__item">
-                        <a class="list__link" href="#">Pending</a>
-                    </li>
-                    <li class="list__item">
-                        <a class="list__link" href="#">Complited</a>
-                    </li>
-                </ul>
-            </nav>
-            <section class="content">
-                <figure class="content__picture">
-                </figure>
-                <div class="content__info">
-                    <div class="content__subtitle">
-                        <p>Programming</p>
-                        <span></span>
-                        <p>Oct 09,2022</p>
+                    <div class="search">
+                        <input class="search__input" type="text" placeholder="Search.."></class=>
+                        <span class="search__icon"><i class="las la-search"></i></span>
                     </div>
-                    <h3 class="content__title">Object-Oriented <br/> Programming in Java</h3>
+                </header>
+                <div class="section">
+                    <h2 class="section__title">Courses</h2>
+                    <p class="section__review">See all</p>
                 </div>
-            </section>
-            <section class="content content--noFlex">
-                <h4 class="content__title content__title--white">How to track your  <br/> course progress easily?</h4>  
-                <div class="content__subtitle pt-20">
-                    <p class="content__text">Find more</p> 
-                    <a class="content__link" href="#">
-                        >
-                    </a>
-                </div>
-            </section>
-            <section class="content">
-                <figure class="content__picture content__picture--pink">
-                </figure>
-                <div class="content__info">
-                    <div class="content__subtitle">
-                        <p>Design</p>
-                        <span></span>
-                        <p>Sept 17,2022</p>
+                <nav class="nav">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a class="list__link list__link--aktive" href="#">All</a>
+                        </li>
+                        <li class="list__item">
+                            <a class="list__link" href="#">Current</a>
+                        </li>
+                        <li class="list__item">
+                            <a class="list__link" href="#">Pending</a>
+                        </li>
+                        <li class="list__item">
+                            <a class="list__link" href="#">Complited</a>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="content">
+                    <figure class="content__picture">
+                    </figure>
+                    <div class="content__info">
+                        <div class="content__subtitle">
+                            <p>Programming</p>
+                            <span></span>
+                            <p>Oct 09,2022</p>
+                        </div>
+                        <h3 class="content__title">Object-Oriented <br/> Programming in Java</h3>
                     </div>
-                    <h3 class="content__title">Visual Elements of User<br/> Interface Design</h3>
-                </div>
-            </section>
-            <section class="content">
-                <figure class="content__picture content__picture--yellow">
-                </figure>
-                <div class="content__info">
-                    <div class="content__subtitle">
-                        <p>Design</p>
-                        <span></span>
-                        <p>Aug 1p,2022</p>
+                </section>
+                <section class="content content--noFlex">
+                    <h4 class="content__title content__title--white">How to track your  <br/> course progress easily?</h4>  
+                    <div class="content__subtitle pt-20">
+                        <p class="content__text">Find more</p> 
+                        <a class="content__link" href="#">
+                            >
+                        </a>
                     </div>
-                    <h3 class="content__title">The Strategy of<br/>Content Marketing</h3>
-                </div>
-            </section>
+                </section>
+                <section class="content">
+                    <figure class="content__picture content__picture--pink">
+                    </figure>
+                    <div class="content__info">
+                        <div class="content__subtitle">
+                            <p>Design</p>
+                            <span></span>
+                            <p>Sept 17,2022</p>
+                        </div>
+                        <h3 class="content__title">Visual Elements of User<br/> Interface Design</h3>
+                    </div>
+                </section>
+                <section class="content">
+                    <figure class="content__picture content__picture--yellow">
+                    </figure>
+                    <div class="content__info">
+                        <div class="content__subtitle">
+                            <p>Design</p>
+                            <span></span>
+                            <p>Aug 1p,2022</p>
+                        </div>
+                        <h3 class="content__title">The Strategy of<br/>Content Marketing</h3>
+                    </div>
+                </section>
 
         </main>
+        <!-- Right-side -->
         <section class="schedule">
-            <header class="schedule__header">
-                <h2 class="schedule__title">Schedule</h2>
-                <input class="schedule__input" type="month" value="2022-09">
-            </header>
-            <ul class="calendar">
-                <li class="calendar__item calendar__item--small">Sun</li>
-                <li class="calendar__item calendar__item--small">Mon</li>
-                <li class="calendar__item calendar__item--small">Tue</li>
-                <li class="calendar__item calendar__item--small">Wed</li>
-                <li class="calendar__item calendar__item--small">Thu</li>
-                <li class="calendar__item calendar__item--small">Fri</li>
-                <li class="calendar__item calendar__item--small">Sat</li>
-                <li class="calendar__item calendar__item--gray">26</li>
-                <li class="calendar__item calendar__item--gray">27</li>
-                <li class="calendar__item calendar__item--gray">28</li>
-                <li class="calendar__item calendar__item--gray">29</li>
-                <li class="calendar__item calendar__item--gray">30</li>
-                <li class="calendar__item">1</li>
-                <li class="calendar__item">2</li>
-                <li class="calendar__item">3</li>
-                <li class="calendar__item">4</li>
-                <li class="calendar__item">5</li>
-                <li class="calendar__item calendar__item--active">6</li>
-                <li class="calendar__item">7</li>
-                <li class="calendar__item">8</li>
-                <li class="calendar__item">9</li>
-                <li class="calendar__item">10</li>
-                <li class="calendar__item">11</li>
-                <li class="calendar__item">12</li>
-                <li class="calendar__item">13</li>
-                <li class="calendar__item">14</li>
-                <li class="calendar__item">15</li>
-                <li class="calendar__item">16</li>
-                <li class="calendar__item">17</li>
-                <li class="calendar__item">18</li>
-                <li class="calendar__item">19</li>
-                <li class="calendar__item">20</li>
-                <li class="calendar__item">21</li>
-                <li class="calendar__item">22</li>
-                <li class="calendar__item">23</li>
-                <li class="calendar__item">24</li>
-                <li class="calendar__item">25</li>
-                <li class="calendar__item">26</li>
-                <li class="calendar__item">27</li>
-                <li class="calendar__item">28</li>
-                <li class="calendar__item">29</li>
-                <li class="calendar__item">30</li>
-            </ul>
-            <section>
-                <h3>
-                    Upcoming
-                </h3>
-                <div class="timeline">
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
+                <header class="schedule__header">
+                    <h2 class="schedule__title">Schedule</h2>
+                    <input class="schedule__input" type="month" value="2022-09">
+                </header>
+                <ul class="calendar">
+                    <li class="calendar__item calendar__item--small">Sun</li>
+                    <li class="calendar__item calendar__item--small">Mon</li>
+                    <li class="calendar__item calendar__item--small">Tue</li>
+                    <li class="calendar__item calendar__item--small">Wed</li>
+                    <li class="calendar__item calendar__item--small">Thu</li>
+                    <li class="calendar__item calendar__item--small">Fri</li>
+                    <li class="calendar__item calendar__item--small">Sat</li>
+                    <li class="calendar__item calendar__item--gray">26</li>
+                    <li class="calendar__item calendar__item--gray">27</li>
+                    <li class="calendar__item calendar__item--gray">28</li>
+                    <li class="calendar__item calendar__item--gray">29</li>
+                    <li class="calendar__item calendar__item--gray">30</li>
+                    <li class="calendar__item">1</li>
+                    <li class="calendar__item">2</li>
+                    <li class="calendar__item">3</li>
+                    <li class="calendar__item">4</li>
+                    <li class="calendar__item">5</li>
+                    <li class="calendar__item calendar__item--active">6</li>
+                    <li class="calendar__item">7</li>
+                    <li class="calendar__item">8</li>
+                    <li class="calendar__item">9</li>
+                    <li class="calendar__item">10</li>
+                    <li class="calendar__item">11</li>
+                    <li class="calendar__item">12</li>
+                    <li class="calendar__item">13</li>
+                    <li class="calendar__item">14</li>
+                    <li class="calendar__item">15</li>
+                    <li class="calendar__item">16</li>
+                    <li class="calendar__item">17</li>
+                    <li class="calendar__item">18</li>
+                    <li class="calendar__item">19</li>
+                    <li class="calendar__item">20</li>
+                    <li class="calendar__item">21</li>
+                    <li class="calendar__item">22</li>
+                    <li class="calendar__item">23</li>
+                    <li class="calendar__item">24</li>
+                    <li class="calendar__item">25</li>
+                    <li class="calendar__item">26</li>
+                    <li class="calendar__item">27</li>
+                    <li class="calendar__item">28</li>
+                    <li class="calendar__item">29</li>
+                    <li class="calendar__item">30</li>
+                </ul>
+                <section class="workday">
+                    <div class="subtitle">
+                        <h3 class="subtitle__text">
+                            Upcoming
+                        </h3>
+                        <span class="subtitle__icon">
+                            <i class="las la-ellipsis-h"></i>
+                        </span>
                     </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                </div>
-            </section>
 
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="timeline__time">09:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">10:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">11:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">12:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">13:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">14:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">15:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">16:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__time">17:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="lesson position-lesson1">
+                            <span class="lesson__icon plr-10">
+                                <i class="las la-pen"></i>
+                            </span>
+                            <div class="lesson__info">
+                                <div class="lesson__time">
+                                    10:00 - 10:30
+                                </div>
+                                <div class="lesson__theme pt-5">
+                                    User Interface Design
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson position-lesson2">
+                            <span class="lesson__icon lesson__icon--pink plr-10">
+                                <i class="las la-layer-group"></i>
+                            </span>
+                            <div class="lesson__info">
+                                <div class="lesson__time">
+                                    13:00 - 13:30
+                                </div>
+                                <div class="lesson__theme pt-5">
+                                    Programming in Java
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson position-lesson3">
+                            <span class="lesson__icon lesson__icon--blue plr-10">
+                                <i class="las la-pencil-ruler"></i>
+                            </span>
+                            <div class="lesson__info">
+                                <div class="lesson__time">
+                                    16:00 - 16:30
+                                </div>
+                                <div class="lesson__theme pt-5">
+                                    The Strategy of Marketing
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         </section>
-
-
     </div>
-    
 </body>
+<script>
+    function toggleMenu() {
+        var sidebar = document.querySelector('.sidebar');
+        var burger = document.querySelector('.burger');
+
+        sidebar.classList.toggle('sidebar--open');
+        burger.classList.toggle('burger--open');
+    }
+</script>
 </html>
